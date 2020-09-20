@@ -2,7 +2,7 @@
 title: Hooks to save time and keep DRY
 published: false
 description: Another Hooks sales pitch, plus a lesser-discussed advantage to useState
-tags: React, Hooks, custom Hook, useState, DRY, juniordev, hireme
+tags: react, hooks, customhook, hireme
 cover_image: https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Algeria_Sahara_Desert_Photo_From_Drone_5.jpg/1200px-Algeria_Sahara_Desert_Photo_From_Drone_5.jpg
 ---
 
@@ -15,12 +15,18 @@ Plenty of blog posts and articles focusing on _Hook_ implementation have already
 ![Class component](https://dev-to-uploads.s3.amazonaws.com/i/1qchoz7nmvio7w698hw0.png)
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/jhyuoczy6rxqk3wffj4f.png)
 
-####Reduce boilerplate
+### Why use hooks?
+
+In a sentence, hooks save time and are clean.
+
+Here's how:
+
+####They reduce boilerplate
 Compare the two components above which render identical DOM elements. Note how Function components require no constructor or render functions, and no `this`\* keyword (written 7 times in the Class component!) is required to bind `toggleMode()` or when calling methods to change `state`.
 
 Unsure about `this`? Tyler McGinnis breaks it down very well [here](https://youtu.be/zE9iro4r918).
 
-####Reduce decision-making overhead
+####They reduce decision-making overhead
 Using only Function components reduces decision-making overhead simply because we never have to make a choice between Class and Function.
 
 - Should this be a Function or Class component?
@@ -29,17 +35,19 @@ Using only Function components reduces decision-making overhead simply because w
 
 Prior to the release of the `useState` Hook, we had no choice but to use Classes for statefulness, but all of the questions above become moot once you've embraced the Function-Hook paradigm.
 
-####Reduce refactoring
+####They reduce refactoring
 One of the more common implementation details that changes through the development cycle of React applications is the addition of state to a component. With Function-Hooks, you can immediately add state and skip the preliminary step of rewriting to Class.
 
-####Reusing `useState` in a custom Hook
-While the above reasons should be enough to convince Class adherents to jump ship, another BIG advantage of Hooks is that they are _re-usable_, which helps us keep solutions nice and [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
+###Reusing `useState` in a custom Hook
+The second part of this post is a short tutorial on writing a custom hook. If you would like to follow along (suggested!), code is available [here](https://github.com/chefThomas/blog01), including starter code and solutions.
+
+Another BIG advantage of Hooks is that they are _re-usable_, which helps us keep solutions nice and [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself), another way to save time and keep code clean.
 
 ##### Example
 
 Adding items to a shopping cart is a common usecase for state in ecommerce applications.
 
-Take a moment to review code for the `FruitStand` component below, and we'll resume underneath when you're done. If you would like to follow along, the source code is available [here]()
+Take a moment to review code for the `FruitStand` component below, and we'll resume underneath when you're done.
 ![Fruit Stand UI](https://dev-to-uploads.s3.amazonaws.com/i/cg06an6a3cqs5s7h1tqy.png)
 
 ![Fruit Stand Component](https://dev-to-uploads.s3.amazonaws.com/i/rzm41dqsjn1emhlqg2w3.png)
@@ -64,6 +72,10 @@ Reformatting the component is very straightforward.
 
 Here's the finished product
 ![reformatted fruit stand component](https://dev-to-uploads.s3.amazonaws.com/i/v2pen6y4pd5k8cow7jkg.png)
+
+#### Challenge!
+
+Implement a decrement function for apples and oranges, using a Hook called `useDecrement`. No negative values allowed 😀
 
 ####Conclusion
 This single component example is very simple, so the benefits of `useIncrement` might not be obvious, but I'm sure you can imagine a situation in the real world where extracting repeated logic would be beneficial.

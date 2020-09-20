@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import FruitStand from "./FruitStand";
-// import FruitStand from "./FruitStand-custom-hook";
+// import FruitStand from "./FruitStand";
+import FruitStand from "./FruitStand-refactor-solution";
+// import FruitStand from "./FruitStand-refactor-your-solution";
 
 ReactDOM.render(
   <React.StrictMode>
