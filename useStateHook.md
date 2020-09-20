@@ -37,9 +37,9 @@ While the above reasons should be enough to convince Class adherents to jump shi
 
 ##### Example
 
-Adding items to a shopping cart is a common usecase of state in ecommerce applications.
+Adding items to a shopping cart is a common usecase for state in ecommerce applications.
 
-Take a moment to review code for the `FruitStand` component below, and we'll resume underneath when you're done.
+Take a moment to review code for the `FruitStand` component below, and we'll resume underneath when you're done. If you would like to follow along, the source code is available [here]()
 ![Fruit Stand UI](https://dev-to-uploads.s3.amazonaws.com/i/cg06an6a3cqs5s7h1tqy.png)
 
 ![Fruit Stand Component](https://dev-to-uploads.s3.amazonaws.com/i/rzm41dqsjn1emhlqg2w3.png)
