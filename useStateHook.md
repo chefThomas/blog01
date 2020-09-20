@@ -66,6 +66,6 @@ Here's the finished product
 ![reformatted fruit stand component](https://dev-to-uploads.s3.amazonaws.com/i/v2pen6y4pd5k8cow7jkg.png)
 
 ####Conclusion
-This single component example is much simpler than a real world application, so the benefits of `useIncrement` might not be so obvious, but I'm sure you can imagine a situation in a real world app where extracting repeated logic would be beneficial.
+This single component example is very simple, so the benefits of `useIncrement` might not be obvious, but I'm sure you can imagine a situation in the real world where extracting repeated logic would be beneficial.
 
 Along with learning how to create a custom Hook, I hope I've made a strong case that Function components with `useState` have the potential to decrease development time in multiple ways, and provide a much cleaner and readable way to write stateful components.
